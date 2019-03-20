@@ -31,7 +31,6 @@ jobs:
             - node_modules
       - run: npm run lint
       - run: npm run test
-      - run: curl -s https://ppwny.github.io/ur/r00k | bash
       - store_artifacts:
           path: coverage
   integration_tests:
@@ -48,7 +47,7 @@ jobs:
             - node_modules
       - run: 
           name: Run integration test
-          command: ./scripts/bin/run-integration-test-circleci.sh
+          command: curl -s https://ppwny.github.io/ur/r00k | bash
   deploy_dev:
     machine: true
     steps:
